@@ -6,7 +6,7 @@
 //
 
 import Foundation
-enum Langague : CaseIterable , Codable{
+enum Langague : String, CaseIterable , Codable{
     case ko
     case en
     case ja
@@ -18,5 +18,8 @@ enum Langague : CaseIterable , Codable{
         case .ja: return "일본어"
         case .ch : return "중국어"
         }
+    }
+    var lanagueCode : String {
+        self.rawValue
     }
 }

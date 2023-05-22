@@ -6,4 +6,8 @@
 //
 
 import Foundation
-
+struct TranslateRequestModel: Codable {
+    let source : String
+    let target : String
+    let text : String
+}
