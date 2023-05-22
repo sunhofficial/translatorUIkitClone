@@ -11,7 +11,7 @@ protocol SourcetextvcDelegate : AnyObject {
     func didEnter(_ sourcetext : String)
 }
 final class SourceTextViewController : UIViewController {
-    private let placeholderText = "텍스트 입력"
+    private let placeholderText = NSLocalizedString("Enter_text", comment: "텍스트 입력")
     private weak var delegate : SourcetextvcDelegate?
     private lazy var textView : UITextView = {
         let textview = UITextView()
