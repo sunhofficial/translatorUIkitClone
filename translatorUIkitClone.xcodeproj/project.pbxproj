@@ -17,6 +17,7 @@
 		C78876152A18DE2D002282DE /* TranslateViewcontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78876142A18DE2D002282DE /* TranslateViewcontroller.swift */; };
 		C78876172A18E71E002282DE /* UIcolor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78876162A18E71E002282DE /* UIcolor+.swift */; };
 		C7ABBE0F2A1A13B2002ED3CF /* SourceTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7ABBE0E2A1A13B2002ED3CF /* SourceTextViewController.swift */; };
+		C7ABBE112A1B01D9002ED3CF /* Lanaguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7ABBE102A1B01D9002ED3CF /* Lanaguage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		C78876142A18DE2D002282DE /* TranslateViewcontroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateViewcontroller.swift; sourceTree = "<group>"; };
 		C78876162A18E71E002282DE /* UIcolor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIcolor+.swift"; sourceTree = "<group>"; };
 		C7ABBE0E2A1A13B2002ED3CF /* SourceTextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceTextViewController.swift; sourceTree = "<group>"; };
+		C7ABBE102A1B01D9002ED3CF /* Lanaguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lanaguage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				C78876132A18DE17002282DE /* scenes */,
 				C78876022A18B9AE002282DE /* Assets.xcassets */,
 				C78876042A18B9AE002282DE /* LaunchScreen.storyboard */,
+				C7ABBE102A1B01D9002ED3CF /* Lanaguage.swift */,
 				C78876072A18B9AE002282DE /* Info.plist */,
 				C78876162A18E71E002282DE /* UIcolor+.swift */,
 			);
@@ -165,6 +168,7 @@
 			files = (
 				C78875FE2A18B9AD002282DE /* TabbarController.swift in Sources */,
 				C78876152A18DE2D002282DE /* TranslateViewcontroller.swift in Sources */,
+				C7ABBE112A1B01D9002ED3CF /* Lanaguage.swift in Sources */,
 				C7ABBE0F2A1A13B2002ED3CF /* SourceTextViewController.swift in Sources */,
 				C78876172A18E71E002282DE /* UIcolor+.swift in Sources */,
 				C78875FA2A18B9AD002282DE /* AppDelegate.swift in Sources */,

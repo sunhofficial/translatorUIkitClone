@@ -7,25 +7,37 @@
 
 import UIKit
 import SnapKit
+
 final class TranslateViewController: UIViewController{
+    enum `Type` {
+        case source
+        case target
+    }
+
+    private var currentLangague : Langague = .ko
+    private var targetLangague: Langague = .en
     private lazy var currentLangagueBtn : UIButton = {
         let btn = UIButton()
-        btn.setTitle("한국어", for: .normal)
+        btn.setTitle(currentLangague.title, for: .normal)
         btn.titleLabel?.font = .systemFont(ofSize: 15.0, weight: .semibold)
         btn.setTitleColor(.label, for: .normal)
         btn.layer.cornerRadius = 9.0
         btn.backgroundColor = .systemBackground
+        btn.addTarget(self, action: #selector(didTapSourceLangagueBtn), for: .touchUpInside)
         return btn
     }()
     private lazy var targetLangagueBtn : UIButton = {
         let btn = UIButton()
-        btn.setTitle("영어", for: .normal)
+        btn.setTitle(targetLangague.title, for: .normal)
         btn.titleLabel?.font = .systemFont(ofSize: 15.0, weight: .semibold)
         btn.setTitleColor(.label, for: .normal)
         btn.layer.cornerRadius = 9.0
         btn.backgroundColor = .systemBackground
+        btn.addTarget(self, action: #selector(didTapTargetLanagueBtn), for: .touchUpInside)
         return btn
     }()
+
+   
     private lazy var buttonStackView : UIStackView = {
         let stackView = UIStackView()
         stackView.distribution = .fillEqually
@@ -134,5 +146,34 @@ private extension TranslateViewController {
     @objc func didTapSourcelabelbase(){
         let vc = SourceTextViewController(delegate: self)
         present(vc,animated: true)
-    } 
+    }
+    @objc func didTapSourceLangagueBtn(){
+        didTapLanagaugeBtn(type: .source)
+    }
+    @objc func didTapTargetLanagueBtn(){
+        didTapLanagaugeBtn(type: .target)
+    }
+    func didTapLanagaugeBtn(type : Type){
+        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        Langague.allCases.forEach{
+            lanague in
+            let action = UIAlertAction(title: lanague.title, style: .default){
+                [weak self ] _ in
+                switch type {
+                case .source :
+                    self?.currentLangague = lanague
+                    self?.currentLangagueBtn.setTitle(lanague.title, for: .normal)
+                case .target:
+                    self?.targetLangague = lanague
+                    self?.targetLangagueBtn.setTitle(lanague.title, for: .normal)
+                }
+                
+                
+            }
+            alertController.addAction(action)
+        }
+        let cancelAction = UIAlertAction(title: "취소하기", style: .cancel)
+        alertController.addAction(cancelAction)
+        present(alertController,animated: true)
+    }
 }
