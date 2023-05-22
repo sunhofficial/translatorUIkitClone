@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C77321532A1B88ED00FFA948 /* BookmarkListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77321522A1B88ED00FFA948 /* BookmarkListViewController.swift */; };
+		C77321552A1B8DED00FFA948 /* BookmarkCollectionviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77321542A1B8DED00FFA948 /* BookmarkCollectionviewCell.swift */; };
+		C77321572A1B939300FFA948 /* BookMarkTextStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77321562A1B939300FFA948 /* BookMarkTextStackView.swift */; };
+		C77321592A1B969200FFA948 /* Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77321582A1B969200FFA948 /* Type.swift */; };
+		C773215D2A1BA36700FFA948 /* TranslateRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C773215C2A1BA36700FFA948 /* TranslateRequestModel.swift */; };
 		C78875FA2A18B9AD002282DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78875F92A18B9AD002282DE /* AppDelegate.swift */; };
 		C78875FC2A18B9AD002282DE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78875FB2A18B9AD002282DE /* SceneDelegate.swift */; };
 		C78875FE2A18B9AD002282DE /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78875FD2A18B9AD002282DE /* TabbarController.swift */; };
@@ -23,6 +28,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C77321522A1B88ED00FFA948 /* BookmarkListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkListViewController.swift; sourceTree = "<group>"; };
+		C77321542A1B8DED00FFA948 /* BookmarkCollectionviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkCollectionviewCell.swift; sourceTree = "<group>"; };
+		C77321562A1B939300FFA948 /* BookMarkTextStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookMarkTextStackView.swift; sourceTree = "<group>"; };
+		C77321582A1B969200FFA948 /* Type.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Type.swift; sourceTree = "<group>"; };
+		C773215C2A1BA36700FFA948 /* TranslateRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateRequestModel.swift; sourceTree = "<group>"; };
 		C78875F62A18B9AD002282DE /* translatorUIkitClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = translatorUIkitClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C78875F92A18B9AD002282DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C78875FB2A18B9AD002282DE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +61,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C77321512A1B88D300FFA948 /* Translate */ = {
+			isa = PBXGroup;
+			children = (
+				C7ABBE0E2A1A13B2002ED3CF /* SourceTextViewController.swift */,
+				C78876142A18DE2D002282DE /* TranslateViewcontroller.swift */,
+			);
+			path = Translate;
+			sourceTree = "<group>";
+		};
+		C773215A2A1B973B00FFA948 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C7ABBE102A1B01D9002ED3CF /* Lanaguage.swift */,
+				C77321582A1B969200FFA948 /* Type.swift */,
+				C7ABBE122A1B170C002ED3CF /* BookMark.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C773215B2A1B974300FFA948 /* Bookmark */ = {
+			isa = PBXGroup;
+			children = (
+				C77321522A1B88ED00FFA948 /* BookmarkListViewController.swift */,
+				C77321562A1B939300FFA948 /* BookMarkTextStackView.swift */,
+				C77321542A1B8DED00FFA948 /* BookmarkCollectionviewCell.swift */,
+			);
+			path = Bookmark;
+			sourceTree = "<group>";
+		};
 		C78875ED2A18B9AD002282DE = {
 			isa = PBXGroup;
 			children = (
@@ -75,10 +114,10 @@
 				C78876132A18DE17002282DE /* scenes */,
 				C78876022A18B9AE002282DE /* Assets.xcassets */,
 				C78876042A18B9AE002282DE /* LaunchScreen.storyboard */,
-				C7ABBE102A1B01D9002ED3CF /* Lanaguage.swift */,
-				C7ABBE122A1B170C002ED3CF /* BookMark.swift */,
+				C773215A2A1B973B00FFA948 /* Models */,
 				C78876072A18B9AE002282DE /* Info.plist */,
 				C78876162A18E71E002282DE /* UIcolor+.swift */,
+				C773215C2A1BA36700FFA948 /* TranslateRequestModel.swift */,
 				C7ABBE142A1B1938002ED3CF /* UserDefaults+.swift */,
 			);
 			path = translatorUIkitClone;
@@ -88,8 +127,8 @@
 			isa = PBXGroup;
 			children = (
 				C78875FD2A18B9AD002282DE /* TabbarController.swift */,
-				C78876142A18DE2D002282DE /* TranslateViewcontroller.swift */,
-				C7ABBE0E2A1A13B2002ED3CF /* SourceTextViewController.swift */,
+				C773215B2A1B974300FFA948 /* Bookmark */,
+				C77321512A1B88D300FFA948 /* Translate */,
 			);
 			path = scenes;
 			sourceTree = "<group>";
@@ -173,13 +212,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				C78875FE2A18B9AD002282DE /* TabbarController.swift in Sources */,
+				C77321552A1B8DED00FFA948 /* BookmarkCollectionviewCell.swift in Sources */,
+				C773215D2A1BA36700FFA948 /* TranslateRequestModel.swift in Sources */,
 				C7ABBE152A1B1938002ED3CF /* UserDefaults+.swift in Sources */,
 				C78876152A18DE2D002282DE /* TranslateViewcontroller.swift in Sources */,
 				C7ABBE112A1B01D9002ED3CF /* Lanaguage.swift in Sources */,
 				C7ABBE0F2A1A13B2002ED3CF /* SourceTextViewController.swift in Sources */,
 				C78876172A18E71E002282DE /* UIcolor+.swift in Sources */,
+				C77321592A1B969200FFA948 /* Type.swift in Sources */,
 				C78875FA2A18B9AD002282DE /* AppDelegate.swift in Sources */,
 				C78875FC2A18B9AD002282DE /* SceneDelegate.swift in Sources */,
+				C77321532A1B88ED00FFA948 /* BookmarkListViewController.swift in Sources */,
+				C77321572A1B939300FFA948 /* BookMarkTextStackView.swift in Sources */,
 				C7ABBE132A1B170C002ED3CF /* BookMark.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

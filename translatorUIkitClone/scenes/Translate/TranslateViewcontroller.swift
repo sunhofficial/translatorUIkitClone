@@ -9,11 +9,6 @@ import UIKit
 import SnapKit
 
 final class TranslateViewController: UIViewController{
-    enum `Type` {
-        case source
-        case target
-    }
-
     private var currentLangague : Langague = .ko
     private var targetLangague: Langague = .en
     private lazy var currentLangagueBtn : UIButton = {
@@ -71,7 +66,7 @@ final class TranslateViewController: UIViewController{
         let newBookmarks = BookMark(sourceLangague: currentLangague, translatedLangague: targetLangague, sourceText: sourcetext, translatedText: transletext)
         UserDefaults.standard.bookmarks = [newBookmarks] + currentBookmarks
         bookMarkBtn.setImage(UIImage(systemName: "bookmark.fill"), for: .normal)
-        
+     
     }
     private lazy var copyMarkBtn : UIButton = {
         let button = UIButton()
