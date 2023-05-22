@@ -62,13 +62,26 @@ final class TranslateViewController: UIViewController{
     private lazy var bookMarkBtn : UIButton = {
         let button = UIButton()
         button.setImage(UIImage(systemName: "bookmark"), for: .normal)
+        button.addTarget(self, action: #selector(didtapBookmarkBtn), for: .touchUpInside)
         return button
     }()
+    @objc func didtapBookmarkBtn(){
+        guard let sourcetext = sourceLabel.text, let transletext = resultLabel.text,bookMarkBtn.imageView?.image == UIImage(systemName: "bookmark") else {return}
+        let currentBookmarks : [BookMark] = UserDefaults.standard.bookmarks
+        let newBookmarks = BookMark(sourceLangague: currentLangague, translatedLangague: targetLangague, sourceText: sourcetext, translatedText: transletext)
+        UserDefaults.standard.bookmarks = [newBookmarks] + currentBookmarks
+        bookMarkBtn.setImage(UIImage(systemName: "bookmark.fill"), for: .normal)
+        
+    }
     private lazy var copyMarkBtn : UIButton = {
         let button = UIButton()
         button.setImage(UIImage(systemName: "doc.on.doc"), for: .normal)
+        button.addTarget(self, action: #selector(didTapCopyBtn), for: .touchUpInside)
         return button
     }()
+    @objc func didTapCopyBtn(){
+        UIPasteboard.general.string = resultLabel.text
+    }
     private lazy var sourceLabelBaseButton: UIView = {
        let view = UIView()
         view.backgroundColor = .systemBackground
@@ -97,6 +110,7 @@ extension TranslateViewController : SourcetextvcDelegate {
         if(sourcetext.isEmpty){return}
         sourceLabel.text = sourcetext
         sourceLabel.textColor = .label
+        bookMarkBtn.setImage(UIImage(systemName: "bookmark"), for: .normal)
     }
 }
 private extension TranslateViewController {

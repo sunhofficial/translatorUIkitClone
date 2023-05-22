@@ -6,7 +6,7 @@
 //
 
 import Foundation
-enum Langague : CaseIterable{
+enum Langague : CaseIterable , Codable{
     case ko
     case en
     case ja
